@@ -14,10 +14,12 @@ const InstructionExecution = ({cei, instructions, pc}) => {
 
       {/* Bottom Box (e.g., 'ch') */}
       <div className="border border-black flex-1 flex items-center justify-center flex-col">
-        <p className="text-black">yesma k halne ho?instructions?</p>
+        <p className="text-black">instructions</p>
+<div>
         {instructions.length > 0 && instructions.slice(pc, pc+10).map((instruction, i, _) => <>
         <p>{pc+i}: {instruction} </p>
         </>)}
+</div>
       </div>
     </div>
   )

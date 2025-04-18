@@ -19,34 +19,45 @@ const [memory, setMemory] = React.useState({young: [], old: []})
 
   function handleClick(e){
     const [event, ...rest_data] = data
-console.log("event: ", event)
+    console.log("event: ", event)
     setData(rest_data)
+// maybe in dumped json has an explicit locals|operands_size and locals|operands array
+/*
+* in header: stack, action: push
+* locals: 2 is the maximum no of locals, determined at compile time
+* operands: operands stack, has an maximum size
+*/
     switch(event.header){
       case "stack":// todo: also set frame
-          const { action, code, header, locals, name, operands } = event;
-          if (action == "push"){
-const parsedCode = code.split(/[\[\],]/).filter(item => item) //handle this in baceknd
-console.log(parsedCode)
-//const parsedCode = JSON.parse(code) //parse this in backend
-              setStacks([parsedCode, ...stacks])
+            const { action, code, header, locals, name, operands } = event;
+            if (action == "push"){
+                const parsedCode = code.split(/[\[\],]/).filter(item => item) //handle this in baceknd
+                console.log(parsedCode)
+                //const parsedCode = JSON.parse(code) //parse this in backend
+                setStacks([parsedCode, ...stacks])
+            }
+            else if(action == "pop"){
+            const [curr_frame, ...rest_frames] = stacks
+            setStacks(rest_frames)
           }
-          else if(action == "pop"){
-          const [curr_frame, ...rest_frames] = stacks
-          setStacks(rest_frames)
-        }
             break;
+
         case "memory":
-setMemory({...memory, old: event.old, young: event.young})
-        break;
+            setMemory({...memory, old: event.old, young: event.young})
+            break;
+
         case "init":
             setMemorySize(event["memory size"])
             break;
+
         case "frame":
           setFrame({...frame, locals: event.locals, operands: event.operands, pc: event.pc, name: event.name})
           break;
+
         case "cei":
           setCEI(event.value)
           break;
+
         default:
           alert(`unhandled header ${event.header}`)
     }

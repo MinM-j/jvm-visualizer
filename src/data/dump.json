@@ -5,6 +5,7 @@
     "header":"stack","locals":2,"name":"main","operands":0}
 
 ,{"header":"frame","locals":["Default","Default"],"name":"main","operands":[],"pc":0}
+
 ,{"header":"cei","value":"Bipush(7)"}
 
 ,{"header":"frame","locals":["Default","Default"],"name":"main","operands":[{"Int":7}],"pc":1}
@@ -77,7 +78,10 @@
 ,{"header":"cei","value":"Aload1"}
 ,{"header":"frame","locals":["Default",{"Ref":"Object Id: 4"}],"name":"main","operands":[{"Ref":"Object Id: 4"}],"pc":34}
 ,{"header":"cei","value":"Invokestatic(0, 19)"}
-,{"action":"push","code":"[Iconst0, Istore1, Iload1, Aload0, Arraylength, Ificmpge(0, 15), Aload0, Iload1, Iaload, Invokestatic(0, 7), Iinc(1, 1), Goto(255, 241), Return]","header":"stack","locals":2,"name":"printArray","operands":0}
+
+,{"action":"push","code":"[Iconst0, Istore1, Iload1, Aload0, Arraylength, Ificmpge(0, 15), Aload0, Iload1, Iaload, Invokestatic(0, 7), Iinc(1, 1), Goto(255, 241), Return]",
+    "header":"stack","locals":2,"name":"printArray","operands":0}
+
 ,{"header":"frame","locals":[{"Ref":"Object Id: 4"},"Default"],"name":"printArray","operands":[],"pc":0}
 ,{"header":"cei","value":"Iconst0"}
 ,{"header":"frame","locals":[{"Ref":"Object Id: 4"},"Default"],"name":"printArray","operands":[{"Int":0}],"pc":1}
@@ -232,6 +236,7 @@
 ,{"header":"cei","value":"Ificmpge(0, 15)"}
 ,{"header":"frame","locals":[{"Ref":"Object Id: 4"},{"Int":7}],"name":"printArray","operands":[],"pc":12}
 ,{"header":"cei","value":"Return"}
+
 ,{"action":"pop","header":"stack"}
 ,{"header":"frame","locals":["Default",{"Ref":"Object Id: 4"}],"name":"main","operands":[],"pc":35}
 ,{"header":"cei","value":"Aload1"}

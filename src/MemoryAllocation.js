@@ -7,46 +7,26 @@ import { Player } from '@lordicon/react';
 
   
 
-//const MemoryAllocation = ({ columns = [[],[]] }) => {
-//  return (
-// <div className="border border-black w-96 p-4 h-full flex flex-col">
-//      {/* Title */}
-//      {/* <p className="mb-4 text-black font-bold">Memory</p> */}
-//
-//      {/* Two vertical panels side by side */}
-//      <div className="flex flex-1 space-x-4">
-//        {columns.map((boxes, colIdx) => (
-//          <div key={colIdx} className="flex flex-col border border-black flex-1 p-2">
-//            {/* Big empty space */}
-//            <div className="flex-1" />
-//
-//            {/* Bottom two small boxes */}
-//            <div className="flex space-x-2 mt-2">
-//              {boxes.map((box, idx) => (
-//                <div
-//                  key={box.id ?? idx}
-//                  className="border border-black flex-1 h-20 flex items-center justify-center"
-//                >
-//                  <p className="text-black">{box.content}</p>
-//                </div>
-//              ))}
-//            </div>
-//          </div>
-//        ))}
-//      </div>
-//    </div>
-//  )
-//}
-//
 const MemoryAllocation = ({memory, memorySize}) => {
     const {young, old} = memory
-    return (<>
-        <div class = "flex flex-col">
-            <p> young </p>
-            { young.length > 0 && young.map(el => <p>{el}</p>)}
-            <p> old </p>
-            { old.length > 0 && old.map(el => <p>{el}</p>)}
+console.log({young, old})
+return (<>
+        <div class = "flex flex-col h-full">
+            <div class="h-1/2 bg-red-200">
+            <p> Young </p>
+          <div>
+            { young.length > 0 && young.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
+          </div>
         </div>
-    </>)
+
+        <div class="h-1/2 bg-blue-200">
+          <p> Old </p>
+          <div>
+            { old.length > 0 && old.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
+          </div>
+          </div>
+        </div>
+</>)
 }
+
 export default MemoryAllocation

@@ -1,9 +1,18 @@
 import React from 'react'
 
+const operandToString = (operand) => {
+  const [type, rawValue] = Object.entries(operand)[0]
+const value = type == "Ref" ? rawValue.replace("Object Id: ", ""): rawValue;
+  if(type == "Ref"){
+  }
+return `${type}: ${value}`
+}
+
 const StackVisualization = ({currFrame}) => {
 const pc = currFrame.pc
 const operands = currFrame.operands
-console.log(operands)
+const locals = currFrame.locals
+console.log({operands, locals})
   return (
      <div className="border border-black p-4 h-full flex flex-col">
       {/* Title */}
@@ -26,11 +35,16 @@ console.log(operands)
 </div>
         <div className="border border-black p-2 m-1 flex-1 text-center">
           <p className="text-black">Locals</p>
+{locals.length > 0 && locals.map(local => <p>
+{operandToString(locals)}
+</p>
+)}
         </div>
         <div className="border border-black p-2 m-1 flex-1 text-center">
           <p className="text-black">Operands</p>
-{operands.length > 0 && operands.map(operand => <p>
-{JSON.stringify(operand)}
+{operands.length > 0 && operands.map(operand => 
+<p>
+{operandToString(operand)}
 </p>
 )}
         </div>
