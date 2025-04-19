@@ -1,0 +1,14 @@
+[{"header":"init","memory size":1024}
+
+,{"action":"push","code":["Iconst0","Istore1","Return"],"header":"stack","locals":2,"name":"main","operands":0}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized"],"name":"main","operands":[],"pc":0}
+,{"header":"cei","value":"Iconst0"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized"],"name":"main","operands":[{"Int":0}],"pc":1}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0}],"name":"main","operands":[],"pc":2}
+,{"header":"cei","value":"Return"}
+
+,{"action":"pop","header":"stack"}
+
+]

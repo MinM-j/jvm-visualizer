@@ -3,41 +3,60 @@ import React, { useEffect, useState,useRef} from 'react';
 
 // const ICON = require('./assets/lock.json');
 // const playerRef = useRef<Player>(null);
+function get_values_from_obj_array(arr){
+console.log("arr", arr)
+    return arr.map(obj => {
+        switch(typeof(obj)){
+            case "string":
+                return  obj == "Uninitialized" ? "??" : obj;
 
-  
+            case "object":
+                  const [key, value] = Object.entries(obj)[0]
+                  if(key == "Reference" || key == "Ref") {
+                    return `Ref: ${value.replace("Object Id: ", "")}`
+                  }else{
+                    return `${key}: ${value}`
+                }
 
-const MemoryAllocation = ({memory, memorySize}) => {
-    const {young, old} = memory
-console.log({young, old})
+            default:
+            alert("unhandled value type");
+        }
+    })
+}
+
+function normaliseJavaLangType(type){
+    if(type.startsWith("java"))
+        return type.split("/").pop();
+    else
+        return type;
+}
+
+function normaliseMemory(memory){
+console.log("memory y/o", memory)
+    return memory.map(obj => {
+        const [ref, type, values] = obj
+        const mappedValues = get_values_from_obj_array(values)
+        const typeInfo =  normaliseJavaLangType(type);
+        return {type: typeInfo, values: mappedValues, ref: ref}
+    })
+}
+
+const MemoryAllocation = ({memory: {young, old}, memorySize}) => {
+
+    console.log("memory", young, old, memorySize)
+    const youngMemory = normaliseMemory(young)
+    const oldMemory = normaliseMemory(old)
+    console.log("youngMemory, oldMemory", youngMemory, oldMemory, memorySize)
+
 return (
-//       <>
-//         <div class = "flex flex-col h-full">
-//             <div class="h-1/2 bg-red-200">
-//             <p> Young </p>
-//           <div>
-//             { young.length > 0 && young.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
-//           </div>
-//         </div>
-
-//         <div class="h-1/2 bg-blue-200">
-//           <p> Old </p>
-//           <div>
-//             { old.length > 0 && old.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
-//           </div>
-//           </div>
-//         </div>
-// </>
  <div className="border-[3px] border-black flex flex-col min-h-80 w-[36vw] mt-10">
-      {/* Title */}
-      {/* <div className="border-b-2 border-black p-2">
-        <p className="text-center font-bold">Memory</p>
-      </div> */}
-
       {/* Young Generation Section */}
       <div className="flex-1 border-b-2 border-black p-2 overflow-y-auto bg-lime-50 bg-opacity-60">
         <p className="font-bold mb-2 text-xl text-left pl-6 pt-1">Young:</p>
         <div className="space-y-1">
-        { young.length > 0 && young.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
+        { youngMemory.length > 0 && youngMemory.map(({type, values, ref}) => 
+              <p class="border border-yellow-500 p-[1px]">{ref}: {type}, {values.join(" | ")} </p>
+        )}
         </div>
       </div>
 
@@ -45,7 +64,7 @@ return (
       <div className="flex-1 p-2 overflow-y-auto bg-red-100 bg-opacity-60">
         <p className="font-bold mb-2 text-xl text-left pl-6 pt-1">Old:</p>
         <div className="space-y-1">
-        { old.length > 0 && old.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
+        { oldMemory.length > 0 && oldMemory.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
         </div>
       </div>
     </div>

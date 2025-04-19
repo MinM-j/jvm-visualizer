@@ -1,0 +1,101 @@
+
+[{"header":"init","memory size":1024}
+
+
+,{"action":"push","code":["Iconst0","Istore1","Iconst0","Istore2","Iconst2","Istore3","Iload2","Iconst3",{"Ificmpge":[0,16]},"Iload1","Iload3","Iadd","Istore1",{"Iinc":[3,2]},{"Iinc":[2,1]},{"Goto":[255,241]},{"Ldc":7},{"Invokestatic":[0,9]},"Iload1",{"Invokestatic":[0,15]},"Return"],"header":"stack","locals":4,"name":"main","operands":0}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized","Uninitialized"],"name":"main","operands":[],"pc":0}
+,{"header":"cei","value":"Iconst0"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized","Uninitialized"],"name":"main","operands":[{"Int":0}],"pc":1}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},"Uninitialized","Uninitialized"],"name":"main","operands":[],"pc":2}
+,{"header":"cei","value":"Iconst0"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},"Uninitialized","Uninitialized"],"name":"main","operands":[{"Int":0}],"pc":3}
+,{"header":"cei","value":"Istore2"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},"Uninitialized"],"name":"main","operands":[],"pc":4}
+,{"header":"cei","value":"Iconst2"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},"Uninitialized"],"name":"main","operands":[{"Int":2}],"pc":5}
+,{"header":"cei","value":"Istore3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},{"Int":2}],"name":"main","operands":[],"pc":6}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},{"Int":2}],"name":"main","operands":[{"Int":0}],"pc":7}
+,{"header":"cei","value":"Iconst3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},{"Int":2}],"name":"main","operands":[{"Int":0},{"Int":3}],"pc":8}
+,{"header":"cei","value":"Ificmpge(0, 16)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},{"Int":2}],"name":"main","operands":[],"pc":9}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},{"Int":2}],"name":"main","operands":[{"Int":0}],"pc":10}
+,{"header":"cei","value":"Iload3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},{"Int":2}],"name":"main","operands":[{"Int":0},{"Int":2}],"pc":11}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":["Uninitialized",{"Int":0},{"Int":0},{"Int":2}],"name":"main","operands":[{"Int":2}],"pc":12}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":0},{"Int":2}],"name":"main","operands":[],"pc":13}
+,{"header":"cei","value":"Iinc(3, 2)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":0},{"Int":4}],"name":"main","operands":[],"pc":14}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[],"pc":15}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[],"pc":6}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[{"Int":1}],"pc":7}
+,{"header":"cei","value":"Iconst3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[{"Int":1},{"Int":3}],"pc":8}
+,{"header":"cei","value":"Ificmpge(0, 16)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[],"pc":9}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[{"Int":2}],"pc":10}
+,{"header":"cei","value":"Iload3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[{"Int":2},{"Int":4}],"pc":11}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":["Uninitialized",{"Int":2},{"Int":1},{"Int":4}],"name":"main","operands":[{"Int":6}],"pc":12}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":1},{"Int":4}],"name":"main","operands":[],"pc":13}
+,{"header":"cei","value":"Iinc(3, 2)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":1},{"Int":6}],"name":"main","operands":[],"pc":14}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[],"pc":15}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[],"pc":6}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[{"Int":2}],"pc":7}
+,{"header":"cei","value":"Iconst3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[{"Int":2},{"Int":3}],"pc":8}
+,{"header":"cei","value":"Ificmpge(0, 16)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[],"pc":9}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[{"Int":6}],"pc":10}
+,{"header":"cei","value":"Iload3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[{"Int":6},{"Int":6}],"pc":11}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":["Uninitialized",{"Int":6},{"Int":2},{"Int":6}],"name":"main","operands":[{"Int":12}],"pc":12}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":2},{"Int":6}],"name":"main","operands":[],"pc":13}
+,{"header":"cei","value":"Iinc(3, 2)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":2},{"Int":8}],"name":"main","operands":[],"pc":14}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[],"pc":15}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[],"pc":6}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[{"Int":3}],"pc":7}
+,{"header":"cei","value":"Iconst3"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[{"Int":3},{"Int":3}],"pc":8}
+,{"header":"cei","value":"Ificmpge(0, 16)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[],"pc":16}
+,{"header":"cei","value":"Ldc(7)"}
+
+,{"header":"memory","old":[],"young":[["0","java/io/ObjectStreamField",[]],["1","java/lang/String$CaseInsensitiveComparator",[]],["2","java/lang/Class",[]],["3","java/io/ObjectStreamField",[]],["4","array",[{"Int":115},{"Int":117},{"Int":109},{"Int":32},{"Int":111},{"Int":102},{"Int":32},{"Int":102},{"Int":105},{"Int":114},{"Int":115},{"Int":116},{"Int":32},{"Int":51},{"Int":32},{"Int":101},{"Int":118},{"Int":101},{"Int":110},{"Int":32},{"Int":110},{"Int":117},{"Int":109},{"Int":98},{"Int":101},{"Int":114},{"Int":115},{"Int":32},{"Int":115},{"Int":116},{"Int":97},{"Int":114},{"Int":116},{"Int":105},{"Int":110},{"Int":103},{"Int":32},{"Int":102},{"Int":114},{"Int":111},{"Int":109},{"Int":32},{"Int":50},{"Int":58},{"Int":32}]],["5","java/lang/String",[{"Reference":"Object Id: 4"},{"Int":0},{"Int":0},{"Int":0}]]]}
+
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[{"Reference":"Object Id: 5"}],"pc":17}
+,{"header":"cei","value":"Invokestatic(0, 9)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[],"pc":18}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[{"Int":12}],"pc":19}
+,{"header":"cei","value":"Invokestatic(0, 15)"}
+,{"header":"frame","locals":["Uninitialized",{"Int":12},{"Int":3},{"Int":8}],"name":"main","operands":[],"pc":20}
+,{"header":"cei","value":"Return"}
+
+,{"action":"pop","header":"stack"}
+
+]

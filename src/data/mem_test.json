@@ -1,0 +1,253 @@
+[{"header":"init","memory size":1024}
+
+,{"action":"push","code":[{"Invokestatic":[0,11]},"Astore1",{"Invokestatic":[0,17]},"Istore2","Return"],"header":"stack","locals":3,"name":"main","operands":0}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"main","operands":[],"pc":0}
+,{"header":"cei","value":"Invokestatic(0, 11)"}
+
+,{"action":"push","code":[{"Ldc":7},"Astore0",{"Ldc":9},"Astore1","Aload0","Areturn"],"header":"stack","locals":2,"name":"createAndCombineStrings","operands":0}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized"],"name":"createAndCombineStrings","operands":[],"pc":0}
+,{"header":"cei","value":"Ldc(7)"}
+
+,{"header":"memory","old":[],
+    "young":[
+      ["0","java/io/ObjectStreamField",[]],
+      ["1","java/lang/String$CaseInsensitiveComparator",[]],
+      ["2","java/lang/Class",[]],
+      ["3","java/io/ObjectStreamField",[]],
+      ["4","array",[{"Int":104},{"Int":101},{"Int":108},{"Int":108},{"Int":111}]],
+      ["5","java/lang/String",[{"Reference":"Object Id: 4"},{"Int":0},{"Int":0},{"Int":0}]]
+    ]}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized"],"name":"createAndCombineStrings","operands":[{"Reference":"Object Id: 5"}],"pc":1}
+,{"header":"cei","value":"Astore0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 5"},"Uninitialized"],"name":"createAndCombineStrings","operands":[],"pc":2}
+,{"header":"cei","value":"Ldc(9)"}
+
+
+,{"header":"memory","old":[],"young":[["0","java/io/ObjectStreamField",[]],
+    ["1","java/lang/String$CaseInsensitiveComparator",[]],
+    ["2","java/lang/Class",[]],
+    ["3","java/io/ObjectStreamField",[]],
+    ["4","array",[{"Int":104},{"Int":101},{"Int":108},{"Int":108},{"Int":111}]],
+    ["5","java/lang/String",[{"Reference":"Object Id: 4"},{"Int":0},{"Int":0},{"Int":0}]],
+    ["6","array",[{"Int":119},{"Int":111},{"Int":114},{"Int":108},{"Int":100}]],["7","java/lang/String",[{"Reference":"Object Id: 6"},{"Int":0},{"Int":0},{"Int":0}]]]}
+
+
+,{"header":"frame","locals":[{"Reference":"Object Id: 5"},"Uninitialized"],"name":"createAndCombineStrings","operands":[{"Reference":"Object Id: 7"}],"pc":3}
+,{"header":"cei","value":"Astore1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 5"},{"Reference":"Object Id: 7"}],"name":"createAndCombineStrings","operands":[],"pc":4}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 5"},{"Reference":"Object Id: 7"}],"name":"createAndCombineStrings","operands":[{"Reference":"Object Id: 5"}],"pc":5}
+,{"header":"cei","value":"Areturn"}
+
+,{"action":"pop","header":"stack"}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"main","operands":[{"Reference":"Object Id: 5"}],"pc":1}
+,{"header":"cei","value":"Astore1"}
+,{"header":"frame","locals":["Uninitialized",{"Reference":"Object Id: 5"},"Uninitialized"],"name":"main","operands":[],"pc":2}
+,{"header":"cei","value":"Invokestatic(0, 17)"}
+
+,{"action":"push","code":["Iconst5",{"Newarray":10},"Dup","Iconst0","Iconst1","Iastore","Dup","Iconst1","Iconst2","Iastore","Dup","Iconst2","Iconst3","Iastore","Dup","Iconst3","Iconst4","Iastore","Dup","Iconst4","Iconst5","Iastore","Astore0","Iconst0","Istore1","Iconst0","Istore2","Iload2","Aload0","Arraylength",{"Ificmpge":[0,15]},"Iload1","Aload0","Iload2","Iaload","Iadd","Istore1",{"Iinc":[2,1]},{"Goto":[255,241]},"Iload1","Ireturn"],"header":"stack","locals":3,"name":"calculateSum","operands":0}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[],"pc":0}
+,{"header":"cei","value":"Iconst5"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Int":5}],"pc":1}
+,{"header":"cei","value":"Newarray(10)"}
+
+,{"header":"memory","old":[],"young":[["0","java/io/ObjectStreamField",[]],["1","java/lang/String$CaseInsensitiveComparator",[]],["2","java/lang/Class",[]],["3","java/io/ObjectStreamField",[]],["4","array",[{"Int":104},{"Int":101},{"Int":108},{"Int":108},{"Int":111}]],["5","java/lang/String",[{"Reference":"Object Id: 4"},{"Int":0},{"Int":0},{"Int":0}]],["6","array",[{"Int":119},{"Int":111},{"Int":114},{"Int":108},{"Int":100}]],["7","java/lang/String",[{"Reference":"Object Id: 6"},{"Int":0},{"Int":0},{"Int":0}]],["8","array",["Uninitialized","Uninitialized","Uninitialized","Uninitialized","Uninitialized"]]]}
+
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"}],"pc":2}
+,{"header":"cei","value":"Dup"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"}],"pc":3}
+,{"header":"cei","value":"Iconst0"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":0}],"pc":4}
+,{"header":"cei","value":"Iconst1"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":0},{"Int":1}],"pc":5}
+,{"header":"cei","value":"Iastore"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"}],"pc":6}
+,{"header":"cei","value":"Dup"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"}],"pc":7}
+,{"header":"cei","value":"Iconst1"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":1}],"pc":8}
+,{"header":"cei","value":"Iconst2"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":1},{"Int":2}],"pc":9}
+,{"header":"cei","value":"Iastore"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"}],"pc":10}
+,{"header":"cei","value":"Dup"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"}],"pc":11}
+,{"header":"cei","value":"Iconst2"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":2}],"pc":12}
+,{"header":"cei","value":"Iconst3"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":2},{"Int":3}],"pc":13}
+,{"header":"cei","value":"Iastore"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"}],"pc":14}
+,{"header":"cei","value":"Dup"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"}],"pc":15}
+,{"header":"cei","value":"Iconst3"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":3}],"pc":16}
+,{"header":"cei","value":"Iconst4"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":3},{"Int":4}],"pc":17}
+,{"header":"cei","value":"Iastore"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"}],"pc":18}
+,{"header":"cei","value":"Dup"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"}],"pc":19}
+,{"header":"cei","value":"Iconst4"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":4}],"pc":20}
+,{"header":"cei","value":"Iconst5"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"},{"Reference":"Object Id: 8"},{"Int":4},{"Int":5}],"pc":21}
+,{"header":"cei","value":"Iastore"}
+,{"header":"frame","locals":["Uninitialized","Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Reference":"Object Id: 8"}],"pc":22}
+,{"header":"cei","value":"Astore0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},"Uninitialized","Uninitialized"],"name":"calculateSum","operands":[],"pc":23}
+,{"header":"cei","value":"Iconst0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},"Uninitialized","Uninitialized"],"name":"calculateSum","operands":[{"Int":0}],"pc":24}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},"Uninitialized"],"name":"calculateSum","operands":[],"pc":25}
+,{"header":"cei","value":"Iconst0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},"Uninitialized"],"name":"calculateSum","operands":[{"Int":0}],"pc":26}
+,{"header":"cei","value":"Istore2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[],"pc":27}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":0}],"pc":28}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":0},{"Reference":"Object Id: 8"}],"pc":29}
+,{"header":"cei","value":"Arraylength"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":0},{"Int":5}],"pc":30}
+,{"header":"cei","value":"Ificmpge(0, 15)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[],"pc":31}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":0}],"pc":32}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":0},{"Reference":"Object Id: 8"}],"pc":33}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":0},{"Reference":"Object Id: 8"},{"Int":0}],"pc":34}
+,{"header":"cei","value":"Iaload"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":0},{"Int":1}],"pc":35}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":0},{"Int":0}],"name":"calculateSum","operands":[{"Int":1}],"pc":36}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":0}],"name":"calculateSum","operands":[],"pc":37}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[],"pc":38}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[],"pc":27}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":1}],"pc":28}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":1},{"Reference":"Object Id: 8"}],"pc":29}
+,{"header":"cei","value":"Arraylength"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":1},{"Int":5}],"pc":30}
+,{"header":"cei","value":"Ificmpge(0, 15)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[],"pc":31}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":1}],"pc":32}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":1},{"Reference":"Object Id: 8"}],"pc":33}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":1},{"Reference":"Object Id: 8"},{"Int":1}],"pc":34}
+,{"header":"cei","value":"Iaload"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":1},{"Int":2}],"pc":35}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":1},{"Int":1}],"name":"calculateSum","operands":[{"Int":3}],"pc":36}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":1}],"name":"calculateSum","operands":[],"pc":37}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[],"pc":38}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[],"pc":27}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":2}],"pc":28}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":2},{"Reference":"Object Id: 8"}],"pc":29}
+,{"header":"cei","value":"Arraylength"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":2},{"Int":5}],"pc":30}
+,{"header":"cei","value":"Ificmpge(0, 15)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[],"pc":31}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":3}],"pc":32}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":3},{"Reference":"Object Id: 8"}],"pc":33}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":3},{"Reference":"Object Id: 8"},{"Int":2}],"pc":34}
+,{"header":"cei","value":"Iaload"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":3},{"Int":3}],"pc":35}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":3},{"Int":2}],"name":"calculateSum","operands":[{"Int":6}],"pc":36}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":2}],"name":"calculateSum","operands":[],"pc":37}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[],"pc":38}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[],"pc":27}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":3}],"pc":28}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":3},{"Reference":"Object Id: 8"}],"pc":29}
+,{"header":"cei","value":"Arraylength"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":3},{"Int":5}],"pc":30}
+,{"header":"cei","value":"Ificmpge(0, 15)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[],"pc":31}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":6}],"pc":32}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":6},{"Reference":"Object Id: 8"}],"pc":33}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":6},{"Reference":"Object Id: 8"},{"Int":3}],"pc":34}
+,{"header":"cei","value":"Iaload"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":6},{"Int":4}],"pc":35}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":6},{"Int":3}],"name":"calculateSum","operands":[{"Int":10}],"pc":36}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":3}],"name":"calculateSum","operands":[],"pc":37}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[],"pc":38}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[],"pc":27}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":4}],"pc":28}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":4},{"Reference":"Object Id: 8"}],"pc":29}
+,{"header":"cei","value":"Arraylength"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":4},{"Int":5}],"pc":30}
+,{"header":"cei","value":"Ificmpge(0, 15)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[],"pc":31}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":10}],"pc":32}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":10},{"Reference":"Object Id: 8"}],"pc":33}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":10},{"Reference":"Object Id: 8"},{"Int":4}],"pc":34}
+,{"header":"cei","value":"Iaload"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":10},{"Int":5}],"pc":35}
+,{"header":"cei","value":"Iadd"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":10},{"Int":4}],"name":"calculateSum","operands":[{"Int":15}],"pc":36}
+,{"header":"cei","value":"Istore1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":4}],"name":"calculateSum","operands":[],"pc":37}
+,{"header":"cei","value":"Iinc(2, 1)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":5}],"name":"calculateSum","operands":[],"pc":38}
+,{"header":"cei","value":"Goto(255, 241)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":5}],"name":"calculateSum","operands":[],"pc":27}
+,{"header":"cei","value":"Iload2"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":5}],"name":"calculateSum","operands":[{"Int":5}],"pc":28}
+,{"header":"cei","value":"Aload0"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":5}],"name":"calculateSum","operands":[{"Int":5},{"Reference":"Object Id: 8"}],"pc":29}
+,{"header":"cei","value":"Arraylength"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":5}],"name":"calculateSum","operands":[{"Int":5},{"Int":5}],"pc":30}
+,{"header":"cei","value":"Ificmpge(0, 15)"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":5}],"name":"calculateSum","operands":[],"pc":39}
+,{"header":"cei","value":"Iload1"}
+,{"header":"frame","locals":[{"Reference":"Object Id: 8"},{"Int":15},{"Int":5}],"name":"calculateSum","operands":[{"Int":15}],"pc":40}
+,{"header":"cei","value":"Ireturn"}
+
+,{"action":"pop","header":"stack"}
+
+,{"header":"frame","locals":["Uninitialized",{"Reference":"Object Id: 5"},"Uninitialized"],"name":"main","operands":[{"Int":15}],"pc":3}
+,{"header":"cei","value":"Istore2"}
+,{"header":"frame","locals":["Uninitialized",{"Reference":"Object Id: 5"},{"Int":15}],"name":"main","operands":[],"pc":4}
+,{"header":"cei","value":"Return"}
+
+,{"action":"pop","header":"stack"}
+
+]

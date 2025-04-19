@@ -1,11 +1,18 @@
 .App {
   /* text-align: center; */
   display: grid;
-  grid-template-columns: 30% 40% 30% !important;
+  grid-template-columns: 30% 70% !important;
   justify-items: center;
   width: 100% !important;
+  border: 2px solid green;
+  height: 80vh;
+  padding: 1em;
+  gap: 1em;
 }
 
+.app-child{
+  border: 2px solid red;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
