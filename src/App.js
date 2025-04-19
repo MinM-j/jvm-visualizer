@@ -14,7 +14,7 @@ const [memory, setMemory] = React.useState({young: [], old: []})
   const [stacks, setStacks] = React.useState([])
   //const [pc, setPC] = React.useState(0)
   //const [operands, setOperands] = React.useState([])
-  const [frame, setFrame] = React.useState({name: "",locals: [], operands: [], pc: 0, name: "" })
+  const [frame, setFrame] = React.useState({name: "",locals: [], operands: [], pc: 0})
   const [cei, setCEI] = React.useState(null)
 
   function handleClick(e){
@@ -70,8 +70,8 @@ const pc = frame.pc
         <>
 <main>
     <div className="App">
-        <div className="instruction text-center">
-        <a className="App-link"
+        <div className="instruction text-center mt-5">
+        <a className="App-link bg-white px-4 rounded-xl border-2 border-black"
           href="/"
           rel="noopener noreferrer"
         >
@@ -79,9 +79,9 @@ const pc = frame.pc
         </a>
         <InstructionExecution cei={cei} instructions={instructions} pc={pc}/>
         </div>
-        <div className="memory text-center">
+        <div className="memory text-center mt-5">
         <a
-          className="App-link"
+          className="App-link bg-white px-4 rounded-xl border-2 border-black"
           href="/"
           rel="noopener noreferrer"
         >
@@ -90,14 +90,14 @@ const pc = frame.pc
       <MemoryAllocation memorySize = {memorySize} memory={memory} />
          <button 
             onClick={handleClick} 
-            style = {{margin: "auto", padding: "1em", border: "2px solid green", textAlign: "center"}}
+            className="border-2 border-black px-8 py-3 rounded-xl bg-white text-xl font-semibold mt-20 hover:bg-black hover:text-white transition duration-300 ease-in-out"
           >
             Next 
         </button> 
         </div>
-        <div className="garbage text-center">
+        <div className="garbage text-center mt-5">
         <a
-          className="App-link"
+          className="App-link bg-white px-4 rounded-xl border-2 border-black  "
           href="/"
           rel="noopener noreferrer"
         >
