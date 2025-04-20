@@ -82,16 +82,15 @@ function normaliseMemory(memory){
 }
 
 const MemoryAllocation = ({memory: {young, old}, memorySize}) => {
-
     console.log("memory", young, old, memorySize)
     const youngMemory = normaliseMemory(young)
     const oldMemory = normaliseMemory(old)
     console.log("youngMemory, oldMemory", youngMemory, oldMemory, memorySize)
 
 return (
- <div className="border-[3px] border-black flex flex-col min-h-80 w-[36vw] mt-10">
+ <div className="border-[3px] border-black flex  flex-col max-h-[100%] flex-grow">
       {/* Young Generation Section */}
-      <div className="flex-1 border-b-2 border-black p-2 overflow-y-auto bg-lime-50 bg-opacity-60">
+      <div className="flex-1   p-2 overflow-y-auto young-memory">
         <p className="font-bold mb-2 text-xl text-left pl-6 pt-1">Young:</p>
         <div className="space-y-1">
         { youngMemory.length > 0 && youngMemory.map(({type, values, ref}) => 
@@ -103,7 +102,7 @@ return (
       </div>
 
        {/* Old Generation Section */}
-      <div className="flex-1 p-2 overflow-y-auto bg-red-100 bg-opacity-60">
+      <div className="flex-1   overflow-y-auto old-memory" >
         <p className="font-bold mb-2 text-xl text-left pl-6 pt-1">Old:</p>
         <div className="space-y-1">
         { oldMemory.length > 0 && oldMemory.map(({type, values, ref}) =>

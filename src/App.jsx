@@ -9,6 +9,7 @@ import React from "react"
 //import jsonData from "./data/no_mem_test.json"
 //import jsonData from "./data/my_number_test.json"
 import jsonData from "./data/obj_array_test.json"
+//import jsonData from "./data/for_bipul.json"
 
 function codeToString(code){
     if(typeof code == "object"){
@@ -105,13 +106,13 @@ const dummyFrame = {name: "",locals: [], operands: [], pc: 0, code: []};
   <div className="App">
     {/* Left: JVMVisualizer takes only necessary width */}
     <div className="app-child left w-full ">
-      <p > Stack </p>
+      <p className="box-label" >Stack</p>
       <StateVisualizer stackFrames={stackFrames} currFrame={currFrame} />
     </div>
 
     {/* Right: MemoryAllocation takes the rest */}
-    <div className="app-child right flex-1 w-full">
-      <p > Memory </p>
+    <div className="app-child right flex-1 w-full max-h-[100%] flex flex-col">
+      <p className="box-label" > Memory ({memorySize}) </p>
       <MemoryAllocation memorySize={memorySize} memory={memory} />
     </div>
   </div>

@@ -4,7 +4,7 @@ export default function StateVisualizer({ stackFrames, currFrame }) {
   const { locals, operands, code, pc } = currFrame;
 
   return (
-    <div className="border rounded-lg w-full max-w-[400px] flex flex-col text-sm overflow-hidden h-full">
+    <div className="border rounded-lg w-full  flex flex-col text-sm overflow-hidden h-full">
       {/* CEI Label */}
       <div className="text-center border-b py-1 font-medium cei-text">{code[pc] || "No Instruction"}</div>
 
@@ -52,12 +52,12 @@ export default function StateVisualizer({ stackFrames, currFrame }) {
         </div>
 */}
 
-<div className="flex flex-col justify-between h-64 border-r p-2 overflow-y-auto">
+<div className="flex flex-col justify-between h-64 border-r p-2 overflow-y-auto max-w-[45%]">
 {/* <!-- Stack frames (content) --> */}
-  <div className="flex flex-col reverse  flex-grow justify-end space-y-reverse space-y-1 overflow-y-auto">
-      <div className="border-t pt-1 frame-text"> <Frame {...currFrame} /> </div>
+  <div className="flex flex-col flex-grow justify-end space-y-reverse space-y-1  ">
+      <div className="break-all border-t pt-1 frame-text"> <Frame {...currFrame} /> </div>
       {stackFrames.map((frame, i) => (
-        <div className="border-t pt-1 frame-text"> <Frame name = {frame.name} pc = {frame.pc} /> </div>
+        <div className="break-all border-t pt-1 frame-text"> <Frame name = {frame.name} pc = {frame.pc} /> </div>
       ))}
   </div>
 
@@ -88,7 +88,7 @@ function Instruction({instruction, pc, i}) {
 }
 
 function Frame({name, pc}){
-return ( <> {name} | pc: {pc}</>)
+return ( <> {name} | <span class="pc-text">pc: {pc}</span></>)
 }
 
 
