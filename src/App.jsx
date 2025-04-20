@@ -4,7 +4,11 @@ import StateVisualizer from "./StateVisualizer.js"
 import React from "react"
 //
 //import jsonData from "./data/callstack.json"
-import jsonData from "./data/mem_test.json"
+//import jsonData from "./data/mem_test.json"
+//import jsonData from "./data/garbage_test.jsonn""
+//import jsonData from "./data/no_mem_test.json"
+//import jsonData from "./data/my_number_test.json"
+import jsonData from "./data/obj_array_test.json"
 
 function codeToString(code){
     if(typeof code == "object"){

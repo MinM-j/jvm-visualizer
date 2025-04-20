@@ -10,6 +10,30 @@
   gap: 1em;
 }
 
+
+.subbox-header{
+  background-color: antiquewhite;
+  color: midnightblue;
+}
+
+.instruction-text{
+  color: rebeccapurple;
+}
+.cei-text{
+  color: rebeccapurple;
+}
+.frame-text{
+  color: rebeccapurple;
+}
+.operands-text{
+  color: rebeccapurple;
+}
+
+.locals-text{
+  color: rebeccapurple;
+}
+
+
 .app-child{
   border: 2px solid red;
 }

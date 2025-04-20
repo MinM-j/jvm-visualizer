@@ -6,11 +6,13 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
       font-family: 'Poppins', sans-serif;
-  /* -webkit-font-smoothing: antialiased; */
-  /* -moz-osx-font-smoothing: grayscale; */
-  background-image: url('../public/Gradient.jpg');
-   background-size: cover; /* Optional: makes the background cover the entire element */
-  background-position: center; /* Optional: centers the image */
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
+    /* background-image: url('../public/Gradient.jpg'); */
+    /* background-size: cover; */
+    /* Optional: makes the background cover the entire element */
+    /* background-position: center; */
+    /* Optional: centers the image */
 }
 
 code {

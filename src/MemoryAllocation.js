@@ -3,8 +3,18 @@ import React, { useEffect, useState,useRef} from 'react';
 
 // const ICON = require('./assets/lock.json');
 // const playerRef = useRef<Player>(null);
-function get_values_from_obj_array(arr){
-console.log("arr", arr)
+function get_values_from_obj_array(arr, type){
+      console.log("arr ", arr)
+      if(type == "array:C"){
+          return arr
+                .map(obj => Object.entries(obj)[0][1])
+                .map(charCode => String.fromCharCode(charCode))
+                .join("")
+      }else if(type.startsWith("array:")){
+          return arr
+                .map(obj => Object.entries(obj)[0][1])
+}
+
     return arr.map(obj => {
         switch(typeof(obj)){
             case "string":
@@ -25,19 +35,49 @@ console.log("arr", arr)
 }
 
 function normaliseJavaLangType(type){
-    if(type.startsWith("java"))
+    if(type.startsWith("array:")){
+        switch(type){
+            case "array:C":
+                return "array:char"
+            case "array:I":
+              return "array:int"
+        default:
+        return type;
+        }
+    }
+    else if(type.startsWith("java"))
         return type.split("/").pop();
     else
         return type;
 }
+//function normalizeArrayValues(itemType, values){
+//
+//}
+//
+//function normalizeDumpedValues(type, values){
+    //if(type.startsWith("array:")){
+        //type.slice("array:".length) == "C" ? "char" :
+//
+//
+        //switch(type){
+            //case "array:C":
+                //const itemType = "char";
+                //return ["array:char", normalizeArrayValues(, values)]
+            //case "array:I":
+              //return "array:int"
+        //default:
+        //return type
+        //}
+    //}
+//}
 
 function normaliseMemory(memory){
-console.log("memory y/o", memory)
+//console.log("memory y/o", memory)
     return memory.map(obj => {
-        const [ref, type, values] = obj
-        const mappedValues = get_values_from_obj_array(values)
+        const [ref, type, static_values, instanceValues] = obj
+        const mappedInstanceValues = get_values_from_obj_array(instanceValues, type)
         const typeInfo =  normaliseJavaLangType(type);
-        return {type: typeInfo, values: mappedValues, ref: ref}
+        return {type: typeInfo, values: mappedInstanceValues, ref: ref}
     })
 }
 
@@ -55,7 +95,9 @@ return (
         <p className="font-bold mb-2 text-xl text-left pl-6 pt-1">Young:</p>
         <div className="space-y-1">
         { youngMemory.length > 0 && youngMemory.map(({type, values, ref}) => 
-              <p class="border border-yellow-500 p-[1px]">{ref}: {type}, {values.join(" | ")} </p>
+              <p class="border border-yellow-500 p-[1px]">
+                {ref}: {type}, {typeof(values) == "string" ? `"${values}"` : values.join(" | ")} 
+              </p>
         )}
         </div>
       </div>
@@ -64,7 +106,11 @@ return (
       <div className="flex-1 p-2 overflow-y-auto bg-red-100 bg-opacity-60">
         <p className="font-bold mb-2 text-xl text-left pl-6 pt-1">Old:</p>
         <div className="space-y-1">
-        { oldMemory.length > 0 && oldMemory.map(([ref, obj_type]) => <p>{ref}: {obj_type}</p>)}
+        { oldMemory.length > 0 && oldMemory.map(({type, values, ref}) =>
+          <p class="border border-yellow-500 p-[1px]">
+            {ref}: {type}, {typeof(values) == "string" ? `"${values}"` : values.join(" | ")} 
+          </p>
+        )}
         </div>
       </div>
     </div>
