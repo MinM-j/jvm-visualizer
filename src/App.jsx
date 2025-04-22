@@ -8,8 +8,13 @@ import React from "react"
 //import jsonData from "./data/garbage_test.jsonn""
 //import jsonData from "./data/no_mem_test.json"
 //import jsonData from "./data/my_number_test.json"
-import jsonData from "./data/obj_array_test.json"
+//import jsonData from "./data/obj_array_test.json"
 //import jsonData from "./data/for_bipul.json"
+
+
+//import jsonData from "./data/coord_test_final.json"
+import jsonData from "./data/mem_test_final.json"
+
 
 function codeToString(code){
     if(typeof code == "object"){
